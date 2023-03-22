@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block title %}
+<title>Categorias</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Listado de categorias</h1>
+</div>
+<form class="form-inline my-2 my-lg-0" action="" method="GET">
+  <input
+    class="form-control mr-sm-2"
+    type="search"
+    placeholder="Search"
+    aria-label="Search"
+    name="search"
+  />
+  <button class="btn btn-gral my-2 my-sm-0" type="submit">Search</button>
+</form>
+{% for category in list_of_categories%}
+
+<div class="card" style="width: 30%; float: left; margin: 20px; margin-top: 5%">
+  <div class="card-body">
+    <p>
+      <span class="font-weight-bold">Nombre de la categoria:</span>
+      {{category.name}}
+    </p>
+    <div class="btn-container">
+      <a href="/Products/list-products?category={{category.name}}">
+        <button class="btn-gral">Ir a la categoria</button>
+      </a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+<div class="btn-container">
+  <a href="/Products/create-category/">
+    <button class="btn-gral">Crear una categoria nueva</button>
+  </a>
+</div>
+{% endblock %}

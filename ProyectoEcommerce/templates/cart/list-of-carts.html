@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% block title %}
+<title>Carro de compras</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Listado de carritos</h1>
+</div>
+{% for cart in list_of_carts%}
+<div class="card" style="width: 30%; float: left; margin: 20px; margin-top: 5%">
+  <div class="card-body">
+    <p class="card-text">
+      <span class="card-info font-weight-bold">Nombre:</span> {{cart.username}}
+    </p>
+    <p class="card-text">
+      <span class="card-info font-weight-bold">Productos en carro:</span>
+      {{cart.products}}
+    </p>
+    <p class="card-text">
+      <span class="card-info font-weight-bold"
+        >Fecha de creacion de la orden:</span
+      >
+      {{cart.creation_time}}
+    </p>
+  </div>
+</div>
+{% endfor%}
+<div class="btn-container">
+  <a href="/cart/cart">
+    <button class="btn-gral">Crear un nuevo carro de compras</button>
+  </a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block title %}
+<title>Listado de productos</title>
+{% endblock %} {% block contenedor %}
+<h1>Cree el nuevo producto!</h1>
+{% if form%}
+<form action="" method="POST">
+  {% csrf_token %}
+
+  <table>
+    {{form.as_table}}
+  </table>
+
+  <input type="submit" value="Crear producto" />
+</form>
+{% endif %} {% if message %}
+<h2 style="color: green">{{message}}</h2>
+{% endif %} {% endblock %}
