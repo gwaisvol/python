@@ -17,7 +17,8 @@ Ejemplos de urls para navegar sin ir al home:
 "/cart/list-of-carts/"
 
 
-## Autor
+## Autores
 
-- Germán Waisvol
+- Germán Waisvol.
+- Silvina Noemí Cardoso.
 
