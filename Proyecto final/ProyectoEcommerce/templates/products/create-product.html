@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block title %}
+<title>Listado de productos</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Crea el nuevo producto</h1>
+</div>
+{% if form%}
+<div class="form-login">
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <table>
+      {{form.as_table}}
+    </table>
+
+    <input type="submit" value="Crear producto" class="btn-gral btn-users" />
+  </form>
+</div>
+{% endif %} {% if message %}
+<h2 style="color: green">{{message}}</h2>
+<div class="mx-auto text-center mt-5" style="min-width: 60rem">
+  <a href="/Products/list-products">
+    <button class="btn btn-gral" style="min-width: 20rem">
+      Ver los productos
+    </button>
+  </a>
+</div>
+{% endif %} {% if form_errors %}
+<h2 style="color: red">{{form_errors}}</h2>
+{% endif %} {% endblock %}

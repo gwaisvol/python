@@ -1,0 +1,10 @@
+Crear el usuario administrador de django:
+
+python manage.py createsuperuser
+
+usuario: gerwais
+password: pepe1234PEPE
+
+Entrás a http://localhost:8000/admin/ con este usuario y password.
+
+El usuario juanmaadm, contraseña pepe1234PEPE, es el admin de la aplicación (el que hizo el proyecto).

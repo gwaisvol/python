@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block title %}
+<title>Carro de compras</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Crea tu nuevo carro de compras!</h1>
+</div>
+{% if form%}
+<div class="form-login">
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <p
+      style="
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+      "
+    >
+      Un producto por carro.
+    </p>
+
+    <table>
+      {{form.as_table}}
+    </table>
+
+    <input type="submit" value="Crear el carro!" class="btn-gral btn-users" />
+  </form>
+</div>
+{% endif %} {% if message %}
+<h2 style="color: green">{{message}}</h2>
+{% endif %} {% endblock %}

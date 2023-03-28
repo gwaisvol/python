@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {% block title %}
+<title>Inicio</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Bienvenido a Alzstore</h1>
+</div>
+{% if request.user.is_superuser %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h2>Aunque usted, {{request.user.username}} es Admin! Esta es su casa..</h2>
+</div>
+{%endif%}
+<h3 class="text-center py-5">Elija una opcion</h3>
+<div class="mx-auto text-center mt-5" style="min-width: 60rem">
+  <a href="/Products/list-products">
+    <button class="btn btn-gral" style="min-width: 20rem">
+      Ver los productos
+    </button>
+  </a>
+</div>
+<div class="mx-auto text-center mt-5" style="width: 500px">
+  <a href="/Products/list-categories">
+    <button class="btn btn-gral" style="min-width: 20rem">
+      Ver las categorias
+    </button>
+  </a>
+</div>
+<div class="mx-auto text-center mt-5" style="width: 500px">
+  <a href="/nosotros">
+    <button class="btn btn-gral" style="min-width: 20rem; margin-bottom: 15%">
+      La empresa
+    </button>
+  </a>
+</div>
+{% endblock %}

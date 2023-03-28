@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block title %}
+<title>Login</title>
+{% endblock %} {% block contenedor %}
+<h1 class="mx-auto border-bottom py-4 text-center">Registrese!</h1>
+
+{% if form %}
+<div class="form-login">
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+      {{form.as_table}}
+    </table>
+
+    {% if errors %}
+    <p style="color: red">{{errors}}</p>
+    {% endif %}
+
+    <input type="submit" value="Registrarse" class="btn-gral btn-users" />
+  </form>
+</div>
+{% endif %} {% endblock %}

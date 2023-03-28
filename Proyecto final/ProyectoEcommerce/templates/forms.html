@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %}
+<title>Perfil</title>
+{% endblock %} {% block contenedor %}
+<div class="mx-auto border-bottom py-4 text-center" style="width: 500px">
+  <h1>Actualizacion del perfil</h1>
+</div>
+
+{% if formUpdateProfile %}
+<div class="form-login">
+  <form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <table>
+      {{formUpdateProfile.as_table}}
+    </table>
+
+    {% if errors %}
+    <p style="color: red">{{errors}}</p>
+    {% endif %}
+
+    <input type="submit" value="Actualizar" class="btn-gral btn-users" />
+  </form>
+</div>
+{% else%}
+<h1>HOLAAA</h1>
+{% endif %} {% endblock %}
