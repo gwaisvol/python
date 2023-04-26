@@ -1,4 +1,0 @@
-pip install django-admin-interface
-
-python manage.py runserver
-
