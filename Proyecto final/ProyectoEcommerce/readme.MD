@@ -29,7 +29,6 @@ Del lado de admin deberiamos crear un superuser utilizando los comandos en la co
 
 - Germán Waisvol
 - Silvina Noemí Cardoso.
-Video explicativo para la entrega: 
 
 ## División de tareas
 Silvina Cardoso se encargó de crear el proyecto en Django y subirlo a GitHub. Asi como también la parte fundamental de creación de las App del proyecto: Product, Cart y users, con sus respectivas vistas y paginas HTML. 
